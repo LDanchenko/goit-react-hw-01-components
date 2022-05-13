@@ -1,0 +1,6 @@
+.transactionHistory {
+}
+
+.transactionHistory > td {
+  padding: 20px;
+}
