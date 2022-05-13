@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Statistics.module.css';
-function randomColor() {
-  return {
-    backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-  };
-}
-
+import { randomColor } from 'utils/randomColor';
 const Statistic = ({ title, stats }) => {
   return (
     <section className={style.statistics}>
@@ -26,6 +21,11 @@ const Statistic = ({ title, stats }) => {
 
 export default Statistic;
 Statistic.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.array,
+  arrayWithShape: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };

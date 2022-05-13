@@ -1,5 +1,5 @@
 .statistics {
-  display: inline-block;
+  width: min-content;
   margin-left: 50px;
   margin-bottom: 30px;
   font-family: Roboto, sans-serif;
